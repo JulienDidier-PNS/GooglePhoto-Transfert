@@ -1,0 +1,8 @@
+### BUILD FORLDER ###
+CLIENT_PHOTO/bin
+CLIENT_PHOTO/obj
+packages
+packages/*
+
+.vs
+.vs/*
