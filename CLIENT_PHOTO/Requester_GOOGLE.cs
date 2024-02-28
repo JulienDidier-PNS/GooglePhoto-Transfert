@@ -105,14 +105,14 @@ namespace CLIENT_PHOTO
             return await getImagesAsync(generateBody(month, year), accessToken);
             //Console.WriteLine("END OF DOWNLOAD FILE !\n");
         }
-
-        string FILTER_SAMPLE = "C:\\Users\\Julien\\Documents\\filter_sample.txt";
         private string generateBody(string month, string year)
         {
             string body = "";
             try
             {
                 String line;
+                string directoyToGet = pathManager.getParentPath(Directory.GetCurrentDirectory(),2);
+                string FILTER_SAMPLE = Path.Combine(directoyToGet, "filter_sample.txt");
                 //Pass the file path and file name to the StreamReader constructor
                 StreamReader sr = new StreamReader(FILTER_SAMPLE);
                 //Read the first line of text

@@ -85,7 +85,7 @@
     <Compile Include="Images_GOOGLE.cs" />
     <Compile Include="JSONDatas\ConfigurationData.cs" />
     <Compile Include="main.cs" />
-    <Compile Include="pathGenerator.cs" />
+    <Compile Include="pathManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="requesterFactory.cs" />
     <Compile Include="Requester_GOOGLE.cs" />

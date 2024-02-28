@@ -1,0 +1,12 @@
+{
+    "filters": {
+      "dateFilter": {
+        "dates": [
+          {
+            "month": @MONTH,
+            "year": @YEAR
+          }
+        ]
+      }
+    }
+}

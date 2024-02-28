@@ -53,7 +53,7 @@ namespace CLIENT_PHOTO
 
             //creation of FTP folder
             Console.WriteLine("Creation of FTP Folder");
-            string finalDistantPath = pathGenerator.generatePath(configData.distantPath,configData.username,configData.yearToGet,configData.monthToGet);
+            string finalDistantPath = pathManager.generatePath(configData.distantPath,configData.username,configData.yearToGet,configData.monthToGet);
             Console.WriteLine("Path to create: " + finalDistantPath);
 
             //Initialisation of the FTP connection
@@ -64,7 +64,7 @@ namespace CLIENT_PHOTO
             //upload les images téléchargées sur le NAS
             foreach (Images_GOOGLE image in imagesAfter)
             {
-                string localFilePath = Path.Combine(pathGenerator.generatePath(configData.pathToSaveMedias, configData.username), image.filename);
+                string localFilePath = Path.Combine(pathManager.generatePath(configData.pathToSaveMedias, configData.username), image.filename);
                 ftp.UploadFileToFTP(localFilePath, finalDistantPath);
             }
             
